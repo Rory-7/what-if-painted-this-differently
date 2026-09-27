@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What If I Painted This Differently?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <header>
+        <p class="eyebrow">ART × TECHNOLOGY</p>
+        <h1>What If I Painted<br>This Differently?</h1>
+        <p class="subtitle">
+            One painting. Four moods. See how a different perspective
+            can completely change the feeling.
+        </p>
+    </header>
+
+    <main>
+
+        <section class="art-section">
+            <div class="painting" id="painting">
+                <div class="sun"></div>
+                <div class="mountain mountain-one"></div>
+                <div class="mountain mountain-two"></div>
+                <div class="lake"></div>
+                <div class="reflection"></div>
+            </div>
+
+            <p class="caption">
+                A digital interpretation of the same landscape —
+                transformed by mood.
+            </p>
+        </section>
+
+        <section class="controls">
+            <h2>Choose a mood</h2>
+
+            <div class="moods">
+                <button onclick="changeMood('dreamy')">
+                    <span>☾</span>
+                    Dreamy
+                </button>
+
+                <button onclick="changeMood('dramatic')">
+                    <span>◐</span>
+                    Dramatic
+                </button>
+
+                <button onclick="changeMood('calm')">
+                    <span>○</span>
+                    Calm
+                </button>
+
+                <button onclick="changeMood('vivid')">
+                    <span>✦</span>
+                    Vivid
+                </button>
+            </div>
+
+            <div class="result">
+                <p id="moodLabel">Current mood</p>
+                <h2 id="moodTitle">Choose how you see it.</h2>
+                <p id="moodDescription">
+                    The painting stays the same. Your perspective changes.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with curiosity & code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
