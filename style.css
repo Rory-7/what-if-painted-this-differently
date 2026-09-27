@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f2ec;
+    color: #252525;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 70px 20px 45px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 7vw, 78px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.subtitle {
+    max-width: 520px;
+    margin: 25px auto 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.art-section {
+    text-align: center;
+}
+
+.painting {
+    width: min(700px, 100%);
+    height: 430px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #c8d7df 0%,
+        #dce5e4 48%,
+        #aab9ad 49%,
+        #7d9184 100%
+    );
+    transition: 0.8s ease;
+}
+
+/* Sun */
+
+.sun {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #e7b36c;
+    top: 65px;
+    right: 100px;
+    transition: 0.8s ease;
+}
+
+/* Mountains */
+
+.mountain {
+    position: absolute;
+    bottom: 145px;
+    width: 0;
+    height: 0;
+    border-left: 190px solid transparent;
+    border-right: 190px solid transparent;
+    border-bottom: 250px solid #566b67;
+    transition: 0.8s ease;
+}
+
+.mountain-one {
+    left: 80px;
+}
+
+.mountain-two {
+    right: 40px;
+    border-left-width: 220px;
+    border-right-width: 220px;
+    border-bottom-color: #435854;
+}
+
+/* Lake */
+
+.lake {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 155px;
+    background: #718b91;
+    transition: 0.8s ease;
+}
+
+.reflection {
+    position: absolute;
+    bottom: 70px;
+    right: 125px;
+    width: 60px;
+    height: 100px;
+    background: rgba(231, 179, 108, 0.45);
+    filter: blur(10px);
+    transition: 0.8s ease;
+}
+
+.caption {
+    color: #777;
+    font-size: 13px;
+    margin: 18px 0 60px;
+}
+
+.controls {
+    text-align: center;
+}
+
+.controls h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.moods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0 45px;
+}
+
+button {
+    border: 1px solid #ccc5bb;
+    background: transparent;
+    padding: 13px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #333;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #252525;
+    color: white;
+    border-color: #252525;
+}
+
+button span {
+    margin-right: 6px;
+}
+
+.result {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    border-top: 1px solid #d8d1c7;
+}
+
+#moodLabel {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+#moodTitle {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#moodDescription {
+    color: #777;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* DREAMY */
+
+.painting.dreamy {
+    background: linear-gradient(
+        to bottom,
+        #b9b0ca,
+        #e1c7d3 48%,
+        #8c829e 49%,
+        #665f7b
+    );
+}
+
+.painting.dreamy .sun {
+    background: #f2d6c2;
+    box-shadow: 0 0 45px #f2d6c2;
+}
+
+.painting.dreamy .mountain {
+    border-bottom-color: #75677e;
+}
+
+.painting.dreamy .mountain-two {
+    border-bottom-color: #5e526c;
+}
+
+.painting.dreamy .lake {
+    background: #77758f;
+}
+
+/* DRAMATIC */
+
+.painting.dramatic {
+    background: linear-gradient(
+        to bottom,
+        #292f3b,
+        #704b50 48%,
+        #343a3b 49%,
+        #1d292c
+    );
+}
+
+.painting.dramatic .sun {
+    background: #d97843;
+    box-shadow: 0 0 55px #d97843;
+}
+
+.painting.dramatic .mountain {
+    border-bottom-color: #252c31;
+}
+
+.painting.dramatic .mountain-two {
+    border-bottom-color: #161d22;
+}
+
+.painting.dramatic .lake {
+    background: #263c40;
+}
+
+/* CALM */
+
+.painting.calm {
+    background: linear-gradient(
+        to bottom,
+        #d9e1dc,
+        #e8e5d8 48%,
+        #bdc7bc 49%,
+        #9ba99d
+    );
+}
+
+.painting.calm .sun {
+    background: #d8c58f;
+    box-shadow: 0 0 35px #d8c58f;
+}
+
+.painting.calm .mountain {
+    border-bottom-color: #82908a;
+}
+
+.painting.calm .mountain-two {
+    border-bottom-color: #718078;
+}
+
+.painting.calm .lake {
+    background: #8ea7a2;
+}
+
+/* VIVID */
+
+.painting.vivid {
+    background: linear-gradient(
+        to bottom,
+        #7ba8bd,
+        #d9a56e 48%,
+        #43767b 49%,
+        #22585d
+    );
+}
+
+.painting.vivid .sun {
+    background: #f5d04c;
+    box-shadow: 0 0 60px #f5d04c;
+}
+
+.painting.vivid .mountain {
+    border-bottom-color: #315c58;
+}
+
+.painting.vivid .mountain-two {
+    border-bottom-color: #234642;
+}
+
+.painting.vivid .lake {
+    background: #26727a;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        padding-top: 45px;
+    }
+
+    .painting {
+        height: 330px;
+    }
+
+    .mountain {
+        border-left-width: 130px;
+        border-right-width: 130px;
+        border-bottom-width: 180px;
+        bottom: 105px;
+    }
+
+    .mountain-two {
+        border-left-width: 150px;
+        border-right-width: 150px;
+    }
+
+    .sun {
+        width: 75px;
+        height: 75px;
+        right: 55px;
+    }
+
+    .lake {
+        height: 115px;
+    }
+
+    .moods {
+        gap: 8px;
+    }
+
+    button {
+        padding: 11px 15px;
+    }
+}
